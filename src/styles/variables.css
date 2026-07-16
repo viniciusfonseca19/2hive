@@ -1,0 +1,66 @@
+:root {
+  /* ===== Cores da marca ===== */
+  --color-bg: #0D0D12;
+  --color-bg-elevated: #131319;
+  --color-bg-panel: #16161D;
+  --color-purple: #7C3AED;
+  --color-purple-light: #B084FF;
+  --color-purple-dim: #5B2FB0;
+  --color-white: #F5F5F7;
+  --color-gray: #8A8A98;
+  --color-gray-dim: #4A4A55;
+  --color-line: rgba(245, 245, 247, 0.08);
+  --color-line-strong: rgba(245, 245, 247, 0.14);
+
+  /* Cores de acento por projeto */
+  --color-amber: #F5B942;
+  --color-luxo-line: rgba(245, 245, 247, 0.2);
+
+  /* ===== Gradientes ===== */
+  --gradient-purple: linear-gradient(135deg, #7C3AED 0%, #B084FF 100%);
+  --gradient-purple-soft: linear-gradient(180deg, rgba(124, 58, 237, 0.15) 0%, rgba(124, 58, 237, 0) 100%);
+  --gradient-radial-glow: radial-gradient(circle, rgba(124, 58, 237, 0.35) 0%, rgba(124, 58, 237, 0) 70%);
+
+  /* ===== Tipografia ===== */
+  --font-display: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  --fs-hero: clamp(2.75rem, 7vw, 6.5rem);
+  --fs-h1: clamp(2.25rem, 4.5vw, 3.75rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.75rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-body-lg: clamp(1.05rem, 1.4vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
+
+  /* ===== Espaçamento ===== */
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+
+  --section-padding-x: clamp(1.5rem, 6vw, 6rem);
+
+  /* ===== Layout ===== */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+  --max-width: 1440px;
+
+  /* ===== Efeitos ===== */
+  --blur-glass: blur(18px);
+  --shadow-glow-purple: 0 0 60px rgba(124, 58, 237, 0.35);
+  --shadow-panel: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --transition-fast: 0.2s var(--ease-smooth);
+  --transition-base: 0.4s var(--ease-out-expo);
+  --transition-slow: 0.8s var(--ease-out-expo);
+}
