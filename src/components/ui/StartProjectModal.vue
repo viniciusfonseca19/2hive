@@ -16,7 +16,7 @@
             <div class="modal__head">
               <span class="modal__status">Pronto para começar</span>
               <h3>Conte-nos sobre o seu projeto</h3>
-              <p>Preencha os dados abaixo e a mensagem será enviada para contato@2Hive.com.br.</p>
+              <p>Preencha os dados abaixo e a mensagem será enviada para vinifonsecadev@gmail.com.</p>
             </div>
 
             <form class="contact-form" @submit.prevent="submitForm">
@@ -81,7 +81,7 @@ function submitForm() {
     `Nome Completo: ${form.fullName}\nTipo de serviço: ${form.serviceType}\nNome da empresa: ${form.companyName}\nRedes sociais da empresa: ${form.socials}\nNúmero de WhatsApp: ${form.whatsapp}`
   )
 
-  window.location.href = `mailto:contato@2Hive.com.br?subject=${subject}&body=${body}`
+  window.location.href = `mailto:vinifonsecadev@gmail.com?subject=${subject}&body=${body}`
   submitted.value = true
   emit('close')
 }

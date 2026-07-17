@@ -55,6 +55,17 @@ const steps = [
   overflow-x: auto;
   padding: var(--space-lg) 0;
   scroll-snap-type: x proximity;
+  isolation: isolate;
+}
+
+.pipeline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgba(188, 95, 255, 0.16), transparent 70%);
+  filter: blur(24px);
+  animation: pipeline-glow 6s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 .pipeline__track {
@@ -77,11 +88,17 @@ const steps = [
   animation: fill-line 2.4s var(--ease-out-expo) forwards;
   animation-delay: 0.3s;
   opacity: 0;
+  box-shadow: 0 0 16px rgba(188, 95, 255, 0.35);
 }
 
 @keyframes fill-line {
   from { transform: scaleX(0); opacity: 1; }
   to { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes pipeline-glow {
+  from { transform: translateX(-4%) scale(0.96); opacity: 0.7; }
+  to { transform: translateX(4%) scale(1.04); opacity: 1; }
 }
 
 .stage {
@@ -105,6 +122,8 @@ const steps = [
   background: var(--color-purple-light);
   box-shadow: 0 0 10px var(--color-purple-light);
   margin-bottom: var(--space-md);
+  animation: node-pulse 2.2s ease-in-out infinite;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
 }
 
 .stage__card {
@@ -113,6 +132,23 @@ const steps = [
   display: flex;
   flex-direction: column;
   gap: var(--space-2xs);
+  transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo), border-color 0.35s ease;
+  will-change: transform;
+}
+
+.stage:hover .stage__card {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+.stage:hover .stage__node {
+  transform: scale(1.25);
+  box-shadow: 0 0 18px var(--color-purple-light), 0 0 28px rgba(188, 95, 255, 0.35);
+}
+
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 10px var(--color-purple-light); }
+  50% { transform: scale(1.15); box-shadow: 0 0 18px var(--color-purple-light); }
 }
 
 .stage__index {

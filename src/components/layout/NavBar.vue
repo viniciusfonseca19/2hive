@@ -40,6 +40,7 @@ const scrolled = ref(false)
 const menuOpen = ref(false)
 
 const links = [
+  { href: '#time', label: 'Time' },
   { href: '#sobre', label: 'Sobre' },
   { href: '#servicos', label: 'Serviços' },
   { href: '#projetos', label: 'Projetos' },

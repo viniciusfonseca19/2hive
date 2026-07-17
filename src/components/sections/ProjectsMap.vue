@@ -60,7 +60,7 @@ const projects = [
     stack: ['Vue 3', 'CSS puro', 'Node'],
     highlights: ['Interface moderna com identidade de energia limpa', 'Totalmente responsiva', 'Gradientes amarelo + roxo remetendo a sol e inovação'],
     deployUrl: 'https://solara-energia.vercel.app',
-    image: '/projects/solara.svg',
+    image: '/projects/solara.png',
     pos: { x: 150, y: 130 }
   },
   {
@@ -76,7 +76,7 @@ const projects = [
     stack: ['Vue 3', 'PostgreSQL', 'Node', 'Docker'],
     highlights: ['Dashboard com gráficos e indicadores', 'Movimentação de estoque em tempo real', 'Widgets configuráveis'],
     deployUrl: 'https://www.stokk0.tech',
-    image: '/projects/stokk.svg',
+    image: '/projects/stokk.png',
     pos: { x: 650, y: 130 }
   },
   {
@@ -92,7 +92,7 @@ const projects = [
     stack: ['Vue 3', 'Firebase'],
     highlights: ['Status de pedido em tempo real', 'Tempo de preparo estimado', 'Painel pensado para uso na cozinha'],
     deployUrl: 'https://verapizzaria.vercel.app',
-    image: '/projects/vera.svg',
+    image: '/projects/vera.png',
     pos: { x: 150, y: 430 }
   },
   {
@@ -108,7 +108,7 @@ const projects = [
     stack: ['Vue 3', 'CSS puro'],
     highlights: ['Muito branco, muito preto, pouco roxo', 'Áreas de atuação em destaque', 'Visual luxuoso sem exageros'],
     deployUrl: 'https://cavalcanti-associados.vercel.app',
-    image: '/projects/cavalcanti.svg',
+    image: '/projects/cavalcanti.png',
     pos: { x: 650, y: 430 }
   }
 ]

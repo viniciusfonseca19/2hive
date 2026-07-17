@@ -33,7 +33,7 @@
         <div class="dashboard__panel">
           <span class="dashboard__panel-title text-mono">// stack utilizada</span>
           <div class="dashboard__tags">
-            <span v-for="t in ['Vue', 'Node', 'IA', 'Figma', 'Docker']" :key="t" class="tag">{{ t }}</span>
+            <span v-for="t in ['Next', 'Node', 'IA', 'Figma', 'Java']" :key="t" class="tag">{{ t }}</span>
           </div>
         </div>
         <div class="dashboard__panel">
@@ -54,11 +54,11 @@ const rootRef = ref(null)
 useScrollReveal(rootRef, '[data-reveal]', { stagger: 0.15 })
 
 const metrics = [
-  { label: 'Projetos entregues', target: 32, suffix: '' },
-  { label: 'Empresas atendidas', target: 18, suffix: '' },
-  { label: 'Performance média', target: 97, suffix: '%' },
+  { label: 'Projetos entregues', target: 20, suffix: '+' },
+  { label: 'Pedidos atendidas', target: 15, suffix: '+' },
+  { label: 'Performance média', target: 98, suffix: '%' },
   { label: 'Tecnologias', target: 10, suffix: '+' },
-  { label: 'Horas economizadas', target: 1200, suffix: '' }
+  { label: 'Horas economizadas', target: 1200, suffix: '+' }
 ]
 
 const display = ref({})

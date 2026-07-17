@@ -18,12 +18,13 @@
     <NavBar @open-start-project="isStartProjectModalOpen = true" />
     <main>
       <HeroSection />
+      <TeamSpotlight />
       <AboutDashboard />
       <ServicesOS />
       <ProjectsMap />
       <ProcessPipeline />
       <TechWall />
-      <CtaTerminal />
+      <CtaTerminal @open-start-project="isStartProjectModalOpen = true" />
     </main>
     <FooterSection />
     <StartProjectModal v-if="isStartProjectModalOpen" @close="isStartProjectModalOpen = false" />
@@ -39,6 +40,7 @@ import AboutDashboard from './components/sections/AboutDashboard.vue'
 import ServicesOS from './components/sections/ServicesOS.vue'
 import ProjectsMap from './components/sections/ProjectsMap.vue'
 import ProcessPipeline from './components/sections/ProcessPipeline.vue'
+import TeamSpotlight from './components/sections/TeamSpotlight.vue'
 import TechWall from './components/sections/TechWall.vue'
 import CtaTerminal from './components/sections/CtaTerminal.vue'
 import StartProjectModal from './components/ui/StartProjectModal.vue'

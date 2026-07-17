@@ -67,9 +67,9 @@ onMounted(() => {
 onUnmounted(() => clearInterval(interval))
 
 const stats = [
-  { value: '30+', label: 'Projetos entregues' },
+  { value: '20+', label: 'Projetos entregues' },
   { value: '98%', label: 'Performance média' },
-  { value: '12', label: 'Empresas atendidas' }
+  { value: '15+', label: 'Solicitações atendidas' }
 ]
 
 // Hex cluster nodes positioned in a loose 3D sphere

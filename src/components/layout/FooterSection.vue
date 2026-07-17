@@ -19,17 +19,14 @@
 
       <div class="footer__contact">
         <a href="mailto:contato@2hive.com.br" class="footer__link">contato@2hive.com.br</a>
-        <a href="tel:+5511999990000" class="footer__link">+55 11 99999-0000</a>
+        <a href="tel:+558594480856" class="footer__link">+55 85 94480-856</a>
       </div>
 
       <div class="footer__social">
-        <a href="#" aria-label="Instagram" class="footer__icon">
+        <a href="https://www.instagram.com/2hive.br/" aria-label="Instagram" class="footer__icon">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
         </a>
-        <a href="#" aria-label="LinkedIn" class="footer__icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 12v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </a>
-        <a href="#" aria-label="GitHub" class="footer__icon">
+        <a href="https://github.com/KODE-Desenvolvimento-Web" aria-label="GitHub" class="footer__icon">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9 19c-4 1.5-4-1.5-6-2m12 4v-3.4c0-1 .1-1.5-.5-2.1 2.5-.3 5-1.3 5-5.5a4.3 4.3 0 0 0-1.2-3 4 4 0 0 0-.1-3s-1-.3-3.2 1.2a11 11 0 0 0-5.8 0C6.9 3.7 5.9 4 5.9 4a4 4 0 0 0-.1 3 4.3 4.3 0 0 0-1.2 3c0 4.2 2.5 5.2 5 5.5-.4.4-.4.9-.5 1.6V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>

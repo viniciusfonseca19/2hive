@@ -11,7 +11,7 @@
       <div class="terminal__body text-mono">
         <p class="terminal__line"><span class="terminal__prompt">$</span> Vamos construir seu próximo projeto?<span class="terminal__cursor">▌</span></p>
 
-        <button class="terminal__btn" @click="ripple" ref="btnRef">
+        <button class="terminal__btn" @click="handleStart" ref="btnRef">
           <span class="terminal__btn-prompt">&gt;</span> Iniciar Projeto
           <span v-for="r in ripples" :key="r.id" class="ripple" :style="{ left: r.x + 'px', top: r.y + 'px' }"></span>
         </button>
@@ -23,6 +23,8 @@
 <script setup>
 import { ref } from 'vue'
 import { useScrollReveal } from '../../composables/useScrollReveal'
+
+const emit = defineEmits(['open-start-project'])
 
 const rootRef = ref(null)
 useScrollReveal(rootRef, '[data-reveal]', { stagger: 0.15 })
@@ -38,6 +40,11 @@ function ripple(e) {
   setTimeout(() => {
     ripples.value = ripples.value.filter((r) => r.id !== id)
   }, 650)
+}
+
+function handleStart(e) {
+  ripple(e)
+  emit('open-start-project')
 }
 </script>
 

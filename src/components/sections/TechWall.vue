@@ -29,7 +29,7 @@ const rootRef = ref(null)
 useScrollReveal(rootRef, '[data-reveal]', { stagger: 0.05 })
 const { onMove, onLeave } = useMagnetic(0.3)
 
-const technologies = ['Vue', 'CSS', 'JavaScript', 'Node', 'Spring Boot', 'Firebase', 'Figma', 'PostgreSQL', 'Docker', 'Git']
+const technologies = ['Java', 'Spring Boot', 'NodeJs', 'NestJs', 'NextJs', 'VueJs', 'Javascript', 'Typescript', 'Express', 'Tailwind', 'Figma', 'HTML', 'CSS']
 </script>
 
 <style scoped>
