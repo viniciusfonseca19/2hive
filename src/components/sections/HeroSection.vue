@@ -32,6 +32,11 @@
     </div>
 
     <div class="hero__visual" ref="visualRef" @pointermove="onVisualMove" @pointerleave="onVisualLeave">
+      <div class="hero__logo-badge" aria-hidden="true">
+        <div class="hero__logo-ring"></div>
+        <img src="/favicon.svg" alt="Logo 2Hive" class="hero__logo-mark" />
+      </div>
+
       <div class="hex-cluster" :style="clusterStyle">
         <div v-for="h in hexNodes" :key="h.id" class="hex-node" :style="h.style"></div>
         <svg class="hex-lines" viewBox="0 0 400 400">
@@ -248,6 +253,53 @@ const clusterStyle = computed(() => ({
   perspective: 900px;
 }
 
+.hero__logo-badge {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  animation: logo-float 4.2s ease-in-out infinite;
+}
+
+.hero__logo-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(176, 132, 255, 0.55);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 8px rgba(124, 58, 237, 0.08),
+    0 0 36px rgba(124, 58, 237, 0.35),
+    inset 0 0 24px rgba(176, 132, 255, 0.18);
+  animation: logo-spin 10s linear infinite;
+}
+
+.hero__logo-mark {
+  width: 92px;
+  height: 92px;
+  filter: drop-shadow(0 0 18px rgba(176, 132, 255, 0.7));
+  animation: logo-pulse 3.2s ease-in-out infinite;
+}
+
+.hero__logo-badge::before,
+.hero__logo-badge::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  inset: -10px;
+  border: 1px solid rgba(176, 132, 255, 0.18);
+  animation: logo-spin 14s linear infinite reverse;
+}
+
+.hero__logo-badge::after {
+  inset: -28px;
+  border-color: rgba(255, 255, 255, 0.08);
+  animation-duration: 18s;
+}
+
 .hex-cluster {
   position: relative;
   width: 400px;
@@ -279,6 +331,21 @@ const clusterStyle = computed(() => ({
 @keyframes hex-pulse {
   0%, 100% { opacity: 0.7; }
   50% { opacity: 1; }
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes logo-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .hex-lines {

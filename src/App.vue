@@ -2,16 +2,16 @@
   <div class="app-shell">
     <div class="site-ornaments" aria-hidden="true">
       <div class="site-ornament corner-top-left">
-        <img src="/favicon.jpeg" alt="" />
+        <img src="/favicon.svg" alt="" />
       </div>
       <div class="site-ornament corner-top-right">
-        <img src="/favicon.jpeg" alt="" />
+        <img src="/favicon.svg" alt="" />
       </div>
       <div class="site-ornament corner-bottom-left">
-        <img src="/favicon.jpeg" alt="" />
+        <img src="/favicon.svg" alt="" />
       </div>
       <div class="site-ornament corner-bottom-right">
-        <img src="/favicon.jpeg" alt="" />
+        <img src="/favicon.svg" alt="" />
       </div>
     </div>
 

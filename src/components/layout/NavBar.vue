@@ -2,7 +2,7 @@
   <header class="nav" :class="{ 'nav--scrolled': scrolled }">
     <nav class="nav__bar glass-panel">
       <a href="#hero" class="nav__brand" @click="closeMenu">
-        <img src="/favicon.jpeg" alt="Logo 2Hive" class="nav__logo" />
+        <img src="/favicon.svg" alt="Logo 2Hive" class="nav__logo" />
         <span>2Hive</span>
       </a>
 
