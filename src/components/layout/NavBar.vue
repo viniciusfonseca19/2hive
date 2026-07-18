@@ -2,8 +2,7 @@
   <header class="nav" :class="{ 'nav--scrolled': scrolled }">
     <nav class="nav__bar glass-panel">
       <a href="#hero" class="nav__brand" @click="closeMenu">
-        <img src="/favicon.svg" alt="Logo 2Hive" class="nav__logo" />
-        <span>2Hive</span>
+        <img src="/favicon.svg" alt="2Hive" class="nav__logo" />
       </a>
 
       <ul class="nav__links">
@@ -103,8 +102,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 }
 
 .nav__logo {
-  width: 24px;
   height: 24px;
+  width: auto;
 }
 
 .nav__links {

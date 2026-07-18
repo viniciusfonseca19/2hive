@@ -34,7 +34,7 @@
     <div class="hero__visual" ref="visualRef" @pointermove="onVisualMove" @pointerleave="onVisualLeave">
       <div class="hero__logo-badge" aria-hidden="true">
         <div class="hero__logo-ring"></div>
-        <img src="/favicon.svg" alt="Logo 2Hive" class="hero__logo-mark" />
+        <img src="/favicon.svg" alt="2Hive" class="hero__logo-mark" />
       </div>
 
       <div class="hex-cluster" :style="clusterStyle">
@@ -77,7 +77,24 @@ const stats = [
   { value: '15+', label: 'Solicitações atendidas' }
 ]
 
-// Hex cluster nodes positioned in a loose 3D sphere
+const visualRef = ref(null)
+const tilt = ref({ x: 0, y: 0 })
+
+function onVisualMove(e) {
+  const rect = visualRef.value.getBoundingClientRect()
+  const relX = (e.clientX - rect.left) / rect.width - 0.5
+  const relY = (e.clientY - rect.top) / rect.height - 0.5
+  tilt.value = { x: relY * -24, y: relX * 24 }
+}
+
+function onVisualLeave() {
+  tilt.value = { x: 0, y: 0 }
+}
+
+const clusterStyle = computed(() => ({
+  transform: `rotateX(${tilt.value.x}deg) rotateY(${tilt.value.y}deg)`
+}))
+
 const hexNodes = Array.from({ length: 9 }, (_, i) => {
   const angle = (i / 9) * Math.PI * 2
   const radius = 120
@@ -101,24 +118,6 @@ const hexLines = [
   { x1: 200, y1: 200, x2: 220, y2: 60 },
   { x1: 200, y1: 200, x2: 260, y2: 340 }
 ]
-
-const visualRef = ref(null)
-const tilt = ref({ x: 0, y: 0 })
-
-function onVisualMove(e) {
-  const rect = visualRef.value.getBoundingClientRect()
-  const relX = (e.clientX - rect.left) / rect.width - 0.5
-  const relY = (e.clientY - rect.top) / rect.height - 0.5
-  tilt.value = { x: relY * -24, y: relX * 24 }
-}
-
-function onVisualLeave() {
-  tilt.value = { x: 0, y: 0 }
-}
-
-const clusterStyle = computed(() => ({
-  transform: `rotateX(${tilt.value.x}deg) rotateY(${tilt.value.y}deg)`
-}))
 </script>
 
 <style scoped>
@@ -126,7 +125,7 @@ const clusterStyle = computed(() => ({
   position: relative;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   padding: clamp(6rem, 10vh, 8rem) var(--section-padding-x) var(--space-2xl);
   overflow: hidden;
@@ -163,7 +162,7 @@ const clusterStyle = computed(() => ({
 
 .hero__rotator-word-wrap {
   display: inline-block;
-  min-width: 14ch;
+  min-width: 18ch;
 }
 
 .hero__rotator-word {
@@ -279,7 +278,7 @@ const clusterStyle = computed(() => ({
 
 .hero__logo-mark {
   width: 92px;
-  height: 92px;
+  height: auto;
   filter: drop-shadow(0 0 18px rgba(176, 132, 255, 0.7));
   animation: logo-pulse 3.2s ease-in-out infinite;
 }
@@ -414,6 +413,22 @@ const clusterStyle = computed(() => ({
   }
   .hero__scroll {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+  .hero__visual {
+    height: 240px;
+  }
+  .hex-cluster {
+    width: 200px;
+    height: 200px;
+    transform: scale(0.6);
   }
 }
 </style>

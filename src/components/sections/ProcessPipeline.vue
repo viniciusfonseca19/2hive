@@ -128,7 +128,7 @@ const steps = [
 
 .stage__card {
   padding: var(--space-md);
-  height: 160px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   gap: var(--space-2xs);

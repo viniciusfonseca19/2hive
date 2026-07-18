@@ -219,6 +219,12 @@ onMounted(() => {
   color: var(--color-purple-light);
 }
 
+@media (max-width: 1100px) {
+  .dashboard__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .dashboard__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -229,6 +235,12 @@ onMounted(() => {
   .dashboard__panel:first-child {
     border-right: none;
     border-bottom: 1px solid var(--color-line);
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

@@ -29,6 +29,11 @@
           <strong>{{ p.name }}</strong>
           <span class="node__cat">{{ p.category }}</span>
         </span>
+        <span class="node__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
       </button>
     </div>
 
@@ -228,6 +233,18 @@ const projects = [
 .node__cat {
   font-size: var(--fs-micro);
   color: var(--color-gray);
+}
+
+.node__arrow {
+  margin-left: auto;
+  color: var(--color-purple-light);
+  opacity: 0.6;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.node:hover .node__arrow {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
 @media (max-width: 760px) {

@@ -214,14 +214,20 @@ function barHeight(moduleIndex, n) {
   max-height: 200px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .module__body {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     padding-left: 0;
-    gap: var(--space-sm);
   }
   .module__tags {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .module__body {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
 }
 </style>
